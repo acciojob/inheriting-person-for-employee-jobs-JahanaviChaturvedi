@@ -4,7 +4,7 @@ function Person(name, age) {
 	this._age = age;
 }
 Person.prototype.greet = function() {
-	console.log(`Hello,my anme is ${this._name},  I am ${this._age} years old`);
+	console.log(`Hello,my name is ${this._name},  I am ${this._age} years old`);
 };
 
 function Employee(name, age, jobTitle) {
@@ -12,7 +12,7 @@ function Employee(name, age, jobTitle) {
 	this._jobTitle = jobTitle;
 }
 Employee.prototype = Object.create(Person.prototype);
-Employee.prototype,constructor = Employee;
+Employee.prototype.constructor = Employee;
 Employee.prototype.jobGreat = function() {
 	console.log(`Hello, my name is ${this._name}, I am ${this._age}, and my job title is ${this._jobTitle}.`);
 	
