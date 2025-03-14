@@ -8,7 +8,7 @@ Person.prototype.greet = function() {
 };
 
 function Employee(name, age, jobTitle) {
-	Person.call(name,age,jobTitle);
+	Person.call(this,name,age);
 	this._jobTitle = jobTitle;
 }
 Employee.prototype = Object.create(Person.prototype);
